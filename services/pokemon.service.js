@@ -10,15 +10,15 @@ exports.find = async(name) => {
 
   let fetching = !!response;
 
-  // Traer cada pagina del response
+  // Get every page of the response
   while (fetching){
 
-    // Por cada pagina chequear los que matchean con el nombre
+    // For every page, check pokemons that match with the name variable
     let findings = response.results.filter((r) => {
       return r.name.startsWith(name);
     });
 
-    // Por cada match, traer el name e image del pokemon
+    // For every match, get the name & image of the pokemon
     if (findings.length > 0){
       let pokemons = await Promise.all(findings.map(async(f) => {
 

@@ -7,7 +7,7 @@
     "start": "node index.js",
     "devStart": "nodemon index.js",
     "pretest": "eslint --ignore-path .gitignore .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 10000"
   },
   "keywords": [
     "pokeapi",
@@ -24,9 +24,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "chai-things": "^0.2.0",
-    "doctoc": "^1.4.0",
+    "chai-http": "^4.3.0",
     "eslint": "^7.7.0",
     "eslint-config-strongloop": "^2.1.0",
     "mocha": "^6.1.4"
